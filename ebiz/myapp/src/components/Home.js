@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -45,7 +44,6 @@ import iso from "../assets/iso.png";
 import google from "../assets/google.png";
 import cluch from "../assets/cluch.png";
 import logo from "../assets/logo.jpg";
-
 
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
@@ -96,7 +94,80 @@ const Home = () => {
           </ul>
         </nav>
       </header>
-
+      <section className="top-menu-section">
+        <h2>
+          Unlock your business <br />
+          potential with <span>premium software solutions</span>
+        </h2>
+        <div className="menu-card-body">
+          <div className="menu-card">
+            <h3>Software Development</h3>
+            <p>
+              Delivering tailored software solutions to accelerate your business
+              growth.
+            </p>
+            <div className="card-icons-body">
+              <div className="card-item-icon software"></div>
+              <div className="card-arrow-btn"></div>
+            </div>
+          </div>
+          <div className="menu-card">
+            <h3>IT Solution</h3>
+            <p>
+              Transform your business with innovative IT solutions tailored to
+              your needs.
+            </p>
+            <div className="card-icons-body">
+              <div className="card-item-icon it"></div>
+              <div className="card-arrow-btn"></div>
+            </div>
+          </div>
+          <div className="menu-card">
+            <h3>Digital Marketing</h3>
+            <p>
+              Boost your brand’s online presence with expert digital marketing
+              solutions
+            </p>
+            <div className="card-icons-body">
+              <div className="card-item-icon digital-marketing"></div>
+              <div className="card-arrow-btn"></div>
+            </div>
+          </div>
+          <div className="menu-card">
+            <h3>Sourcing & Hiring</h3>
+            <p>
+              Streamline your team-building with expert sourcing and hiring
+              solutions.
+            </p>
+            <div className="card-icons-body">
+              <div className="card-item-icon hiring"></div>
+              <div className="card-arrow-btn"></div>
+            </div>
+          </div>
+          <div className="menu-card">
+            <h3>Education</h3>
+            <p>
+              Transform learning with innovative and effective educational
+              solutions.
+            </p>
+            <div className="card-icons-body">
+              <div className="card-item-icon education"></div>
+              <div className="card-arrow-btn"></div>
+            </div>
+          </div>
+          <div className="menu-card">
+            <h3>IT Infrastructure</h3>
+            <p>
+              Strengthen your business foundation with robust IT infrastructure
+              solutions.
+            </p>
+            <div className="card-icons-body">
+              <div className="card-item-icon infrastructure"></div>
+              <div className="card-arrow-btn"></div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* ********************************ABOUT SECTION ************************************************** */}
 
       <div className="about-section">
@@ -326,7 +397,48 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <section className="reviews">
+        <div className="reviews-host">
+          <img src="https://www.capitalnumbers.com/images/two-for-one/custom-review-tittle-star.svg" alt="stars" />
+          <h2>300+ Glowing <span>Customer Reviews</span></h2>
+          <p>97 out of 100 Clients Have Given Us a Five Star Rating on Google & Clutch</p>
+          <div>
+            <img src="https://www.capitalnumbers.com/images/common/award-logo-1.svg" alt="google" />
+            <img src="https://ebiztechnocrats.com/new/img/clutch-co-vector-logo.png" alt="clutch" />
+          </div>
+        </div>
+        <div className="review-cards-body">
+          <div className="review-card">
+            <div><img src="https://ebiztechnocrats.com/new/img/quote.svg" alt="quate" /></div>
+            <p>"
+              I've been using this app development service for the past two years, & I must say, they have consistently delivered top-notch results.
+              Their attention to detail, technical expertise, & commitment to deadlines have been truly commendable. I highly recommend their services to anyone in need of reliable app development.
+            </p>
+            <div className="review-card-footer">
+              <img src="https://ebiztechnocrats.com/new/img/Lp_wala.png" alt="icon" />
+              <div>
+                <h6>Lpwala</h6>
+                <p>Gaurav Chddha</p>
+              </div>
+            </div>
+          </div>
 
+          <div className="review-card">
+            <div><img src="https://ebiztechnocrats.com/new/img/quote.svg" alt="quate" /></div>
+            <p>"
+              I've been using this app development service for the past two years, & I must say, they have consistently delivered top-notch results.
+              Their attention to detail, technical expertise, & commitment to deadlines have been truly commendable. I highly recommend their services to anyone in need of reliable app development.
+            </p>
+            <div className="review-card-footer">
+              <img src="https://ebiztechnocrats.com/new/img/smartkidsword.png" alt="icon" />
+              <div>
+                <h6>Lpwala</h6>
+                <p>Jatin singh(Director)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="blog-section">
         <h2>
           Browse Our Latest <span>Blog Articles</span>
@@ -340,8 +452,8 @@ const Home = () => {
           ) : (
             blogs.map((blog) => (
               <div className="blog-card" key={blog.id}>
-                <img src={blog.imageUrl || metaverse} alt={blog.title} />
-                {/* <img src={blog.image || metaverse} alt={blog.title} />  */}
+                {/* <img src={blog.imageUrl || metaverse} alt={blog.title} /> */}
+                <img src={`http://localhost:5000/${blog.image}` || metaverse} alt={blog.title} /> 
 
                 <div className="blog-card-content">
                   <p className="date">
@@ -452,13 +564,14 @@ const Home = () => {
             <div class="google-review">
               <img src={google} alt="Google Reviews" />
               <p>
-                <strong>Google Reviews</strong> 4.3 ★ (70 reviews)
+                <strong>Google Reviews</strong> <br />
+                4.3 ★ (70 reviews)
               </p>
             </div>
             <div class="clutch-review">
-              <p>Reviewed on</p>
+              {/* <p>Reviewed on</p> */}
               <img src={cluch} alt="Clutch" />
-              <p>Review Us</p>
+              {/* <p>Review Us</p> */}
             </div>
             <div class="iso-certification">
               <img

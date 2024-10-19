@@ -52,18 +52,43 @@ router.get("/blog/:id", async (req, res) => {
   }
 });
 
-router.post("/blog", upload, async (req, res) => {
-  const { title, content } = req.body;
-  const image = req.file ? req.file.path : null;
+// router.post('/blog', upload, async (req, res) => {
+//     const { title, content } = req.body;
+//     const image = req.file ? req.file.path : null;
 
-  if (!image) {
-    return res.status(400).json({ message: "Image upload failed" });
+//     if (!image) {
+//         return res.status(400).json({ message: 'Image upload failed' });
+//     }
+
+//     const newBlog = new Blog({
+//         title,
+//         content,
+//         image,
+//         createdAt: new Date()
+//     });
+
+//     try {
+//         await newBlog.save();
+//         res.status(201).json({ message: 'Blog added successfully', blog: newBlog });
+//     } catch (error) {
+//         res.status(500).json({ message: 'Error creating blog', error: error.message });
+//     }
+// });
+
+router.post("/blog", upload, async (req, res) => {
+  const { title, content, image } = req.body;
+  const uploadedImage = req.file ? req.file.path : null;
+
+  const finalImage = uploadedImage || image;
+
+  if (!finalImage) {
+    return res.status(400).json({ message: "No image provided" });
   }
 
   const newBlog = new Blog({
     title,
     content,
-    image,
+    image: finalImage,
     createdAt: new Date(),
   });
 

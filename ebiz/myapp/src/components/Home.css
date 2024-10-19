@@ -123,6 +123,115 @@
   }
 }
 
+.top-menu-section{
+  background: #484545;
+  color: white;
+  height: 100vh;
+  /* width: 100vw; */
+  padding-top: 124px;
+  padding-inline: 55px;
+}
+.top-menu-section h2{
+  font-size: 44px;
+  margin-left: 163px;
+  
+}
+.top-menu-section h2 span{
+  background: linear-gradient(90deg, #ffbd12 0, #e03d3d 53.72%, #cd21e9 101.11%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+.top-menu-section * {
+  color: white;
+}
+.menu-card-body{
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu-card{
+  height: 193px;
+    width: 437px;
+    background: #00000021;
+    border-radius: 26px;
+    padding: 22px;
+    margin: 12px;
+}
+.card-icons-body{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-item-icon{
+  background-image: url(https://ebiztechnocrats.com/new/img/wired-outline-680-it-developer-hover-pinch.png);
+  cursor: pointer;
+  background-size: 55px 55px;
+    width: 55px;
+    height: 55px;
+    margin-top: 6px;
+}
+.card-arrow-btn{
+  width: 40px;
+  height: 40px;
+  background: url(https://ebiztechnocrats.com/new/img/ic-arrow-right-light.svg) no-repeat center center rgba(255, 255, 255, .08);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.it{
+  background-image: url(https://ebiztechnocrats.com/new/img/wired-outline-742-code-hover-pinch.png);
+}
+.digital-marketing{
+  background-image: url(https://ebiztechnocrats.com/new/img/wired-outline-20-love-heart-hover-heartbeat.png);
+}
+.hiring{
+  background-image: url(https://ebiztechnocrats.com/new/img/wired-outline-955-demand-hover-click.png);
+}
+.education{
+  background-image: url(https://ebiztechnocrats.com/new/img/wired-outline-112-book-hover-closed.png);
+}
+.infrastructure{
+  background-image: url(https://ebiztechnocrats.com/new/img/wired-outline-1331-repository-hover-pinch.png
+  );
+}
+
+.reviews{
+  display: flex;
+  margin: 50px;
+}
+.review-cards-body{
+  display: flex;
+  padding-inline: 12px;
+}
+.reviews-host h2{
+  font-size: 34px;
+}
+.reviews-host span{
+  background: linear-gradient(90deg, #ffbd12 0, #e03d3d 53.72%, #cd21e9 101.11%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.review-card{
+  border: 1px solid #e4e4e4;
+  border-radius: 2px;
+  padding: 10px;
+  width: 441px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+.review-card-footer{
+  display: flex;
+  align-items: center;
+}
+.review-card-footer img{
+  width: 75px;
+  height: 75px;
+}
 /* ****************************ABOUT SECTION ******************************************************************** */
 
 .about-section {
@@ -131,7 +240,7 @@
   margin: 0 auto;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
-  margin-top: 123px;
+  /* margin-top: 123px; */
 }
 
 .about-section h1 {
@@ -567,14 +676,12 @@ body {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 350px;
-  flex: 1 1;
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 .blog-card img {
-  width: 100%;
-  height: auto;
+  width: 448px;
+  height: 199px;
 }
 
 .blog-card-content {
@@ -661,13 +768,20 @@ body {
 .office-card {
   /* background-color:rgb(63, 62, 62); */
 
-  background-color: transparent;
-  border-radius: 10px;
-  padding: 20px;
-  width: 300px;
-  margin: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  text-align: center;
+  /* background-color: transparent;
+  border-radius: 10px;*/
+  padding: 24px;
+  flex-grow: 1;
+  /* width: 300px;
+  margin: 15px;  */
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); */
+  /* text-align: center; */
+}
+.office-card:nth-child(1){
+  border-right: 1px solid gray;
+}
+.office-card:nth-child(2){
+  border-right: 1px solid gray;
 }
 
 .office-card img {
@@ -728,10 +842,20 @@ body {
 /* ******************************************FOOTER SECTION ***************************************************** */
 
 footer {
-  background-color: #1a1a1a;
+  background-color: #151516;
   color: white;
-  padding: 30px 0;
+  /* padding: 30px 0; */
   font-family: Arial, sans-serif;
+  padding-top: 56px;
+}
+
+footer .container{
+  border: 1px solid #7c7c7c !important;
+  border-radius: 21px;
+  padding: 0;
+  margin-top: 24px;
+  padding: 24px;
+  margin: 0px 78px;
 }
 
 .footer-container {
@@ -759,6 +883,15 @@ footer {
   cursor: pointer;
 }
 
+.google-review{
+  display: flex;
+  border: 1px solid gray;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background: #2c2c2d;
+  margin-bottom: 13px;
+}
 .google-review p {
   color: rgb(179, 171, 171);
 }
@@ -784,7 +917,10 @@ footer {
   width: 100px;
   margin-bottom: 10px;
 }
-
+.google-review img{
+  margin-right: 10px;
+  margin-bottom: 0 !important;
+}
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
